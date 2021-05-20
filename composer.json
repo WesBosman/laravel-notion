@@ -1,0 +1,42 @@
+{
+    "name": "wesbosman/laravelnotion",
+    "description": "An API wrapper for Notion in laravel.",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "notion"
+    ],
+    "authors": [
+        {
+            "name": "Wes Bosman",
+            "email": "wes@nudgecoach.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "scripts": {
+        "test": "./vendor/bin/phpunit"    
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5.x-dev"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WesBosman\\LaravelNotion\\Tests\\": "tests"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "WesBosman\\LaravelNotion\\" : "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WesBosman\\LaravelNotion\\NotionServiceProvider"
+            ]
+        }
+    }
+}
