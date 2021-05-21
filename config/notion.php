@@ -11,7 +11,7 @@ return [
      * 
      * first version was 2021-05-13
      */
-    'api_version' => '2021-05-13',
+    'api_version' => env('NOTION_API_VERSION', null),
 
     /**
      * Base Url
