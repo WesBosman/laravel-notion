@@ -4,14 +4,14 @@ return [
     /**
      * API Token for the notion integration
      */
-    'token' => env('NOTION_TOKEN', null),
+    'api_token' => env('NOTION_API_TOKEN', null),
 
     /**
      * The version of the notion API
      * 
      * first version was 2021-05-13
      */
-    'api_version' => env('NOTION_API_VERSION', null),
+    'api_version' => env('NOTION_API_VERSION', '2021-05-13'),
 
     /**
      * Base Url
