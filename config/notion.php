@@ -16,5 +16,5 @@ return [
     /**
      * Base Url
      */
-    'base_url' => 'https://api.notion.com/v1/'
+    'base_url' => 'https://api.notion.com/v1'
 ];

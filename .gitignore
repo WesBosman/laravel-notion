@@ -1,5 +1,8 @@
 vendor/
 
 .env
+.env.testing
+
+*.cache
 
 tests/Unit

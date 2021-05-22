@@ -3,7 +3,7 @@
 namespace WesBosman\LaravelNotion;
 
 use WesBosman\LaravelNotion\Exceptions\InvalidUserIdException;
-use GuzzleHttp\Client;
+use WesBosman\LaravelNotion\NotionClient;
 
 class NotionUser
 {
@@ -21,10 +21,10 @@ class NotionUser
      * @param GuzzleHttp\Client $client - Guzzle HTTP client
      * @param string $base_url - The base url for the Notion API
      */
-    public function __construct(Client $client, string $base_url)
+    public function __construct(NotionClient $client)
     {
-        $this->client = $client;
-        $this->base_url = $base_url;
+        $this->client = $client->getClient();
+        $this->base_url = NotionClient::API_BASE_URL;
     }
 
     /**

@@ -2,7 +2,7 @@
 
 namespace WesBosman\LaravelNotion;
 
-use GuzzleHttp\Client;
+use WesBosman\LaravelNotion\NotionClient;
 
 class NotionDatabase
 {
@@ -14,10 +14,10 @@ class NotionDatabase
 
     protected $base_url = "";
 
-    public function __construct(Client $client, string $base_url)
+    public function __construct(NotionClient $client)
     {
-        $this->client = $client;
-        $this->base_url = $base_url;
+        $this->client = $client->getClient();
+        $this->base_url = NotionClient::API_BASE_URL;
     }
 
     /**
