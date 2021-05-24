@@ -9,12 +9,13 @@ This repo is a work in progress. The setup needs work. Need to figure out how to
 
 ## Notion Database
 ```php
-    // Create a notion database object with a client and the base_url (will be moved to config variable)
+    // Create a notion database object with the notion client
     $notion_db = new NotionDatabase($client);
 
     // Get all databases
     $response = $notion_db->all();
 
+    // Get a specific database from its id
     $response = $notion_db->get('your database id');
 
     return $response->getBody()->getContents();
@@ -27,7 +28,7 @@ This repo is a work in progress. The setup needs work. Need to figure out how to
     // Get all the users
     $response = $notion_user->all();
 
-    // Get a specific user
+    // Get a specific user from their id
     $response = $notion_user->get('your user id');
 
     return $response->getBody()->getContents();
