@@ -3,6 +3,7 @@
 namespace WesBosman\LaravelNotion;
 
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Config;
 
 class NotionClient
 {
@@ -27,11 +28,8 @@ class NotionClient
      */
     public function __construct()
     {
-        $this->notion_token = config('notion.api_token');
-        $this->notion_version = config('notion.api_version');
-
-        print_r("Token: " . config('notion.api_token'));
-        print_r("Version: " . config('notion.api_version'));
+        $this->notion_token = getenv(self::TOKEN_KEY);
+        $this->notion_version = getenv(self::VERSION_KEY);
 
         $this->headers = [
             "headers" => [
