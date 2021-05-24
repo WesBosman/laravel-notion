@@ -2,7 +2,7 @@
 
 namespace WesBosman\LaravelNotion\Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use WesBosman\LaravelNotion\Tests\TestCase;
 use WesBosman\LaravelNotion\Exceptions\InvalidUserIdException;
 use WesBosman\LaravelNotion\NotionUser;
 use WesBosman\LaravelNotion\NotionClient;

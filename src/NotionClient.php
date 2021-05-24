@@ -30,6 +30,9 @@ class NotionClient
         $this->notion_token = config('notion.api_token');
         $this->notion_version = config('notion.api_version');
 
+        print_r("Token: " . config('notion.api_token'));
+        print_r("Version: " . config('notion.api_version'));
+
         $this->headers = [
             "headers" => [
                 "Authorization"  => "Bearer {$this->notion_token}",

@@ -2,10 +2,8 @@
 
 namespace WesBosman\LaravelNotion\Tests\Unit;
 
+use WesBosman\LaravelNotion\Tests\TestCase;
 use WesBosman\LaravelNotion\NotionDatabase;
-use PHPUnit\Framework\TestCase;
-use GuzzleHttp\Client;
-use WesBosman\LaravelNotion\Constants;
 use WesBosman\LaravelNotion\NotionClient;
 
 class NotionDatabaseTest extends TestCase
@@ -21,9 +19,6 @@ class NotionDatabaseTest extends TestCase
     {
         parent::setUp();
 
-        print_r($_ENV[NotionClient::TOKEN_KEY]);
-        print_r($_ENV[NotionClient::VERSION_KEY]);
-        print_r($_ENV);
         
         $client = new NotionClient();
 
