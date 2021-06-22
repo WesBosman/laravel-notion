@@ -24,19 +24,6 @@ class NotionPage
         'yuan'
     ];
 
-    protected $color_options = [
-        'default',
-        'gray',
-        'brown',
-        'orange',
-        'yellow',
-        'green',
-        'blue',
-        'purple',
-        'pink',
-        'red'
-    ];
-
 
 
 }
